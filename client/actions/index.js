@@ -24,13 +24,14 @@ export const showError = (errorMessage) => {
   }
 }
 
-export function fetchPosts (subreddit) {
+export function fetchPosts (api_category) {
   return (dispatch) => {
     dispatch(requestPosts())
     return request
-      .get(`/api/v1/reddit/subreddit/${subreddit}`)
+      .get('https://opentdb.com/api.php?amount=10')
       .then(res => {
-        dispatch(receivePosts(res.body))
+        console.log(res.body)
+        dispatch(receivePosts(res.body.results))
       })
       .catch(err => {
         dispatch(showError(err.message))
