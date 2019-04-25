@@ -1,10 +1,10 @@
 import React from 'react'
 
-import LoadSubreddit from './LoadSubreddit'
+import StartTrivia from './StartTrivia'
 
 const App = () => (
   <div className='app'>
-    <LoadSubreddit/>
+    <StartTrivia/>
   </div>
 )
 
