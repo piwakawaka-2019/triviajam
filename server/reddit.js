@@ -5,9 +5,9 @@ const router = express.Router()
 
 router.use(express.json())
 
-router.get('/subreddit/:subreddit', (req, res) => {
+router.get('/', (req, res) => {
   request
-    .get(`http://www.reddit.com/r/${req.params.subreddit}.json`)
+    .get(`https://opentdb.com/api.php?amount=10`)
     .end((err, result) => {
       if (err) {
         res.status(500).send(err.message)
