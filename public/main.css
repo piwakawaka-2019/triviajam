@@ -1,8 +1,17 @@
+html {
+  height: auto;
+}
+
 body {
   margin: 0;
   padding: 0;
   background: #262626;
   width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  height: 50vh;
 }
 a {
   position: absolute;
@@ -27,12 +36,12 @@ a svg rect {
   left: 0;
   width: auto;
   height: auto;
-  fill: transparen <div id= "app" ></div>;
+  fill: transparent;
 }
 a svg rect {
   stroke: #fff;
   stroke-width: 4;
-  <divid="app"></div>transition: 3s;
+  transition: 3s;
   stroke-dasharray: 500, 500;
   stroke-dashoffset: 0;
 }
@@ -41,9 +50,166 @@ a:hover svg rect {
   stroke-dashoffset: 315;
   stroke: #00bcd4;
 }
-/* 
-h2 {
-  padding: 0%;
-  margin: 0%;
-  width: auto;
+
+
+.container {
+  display: inline-block;
+}
+.end1,
+.middle1,
+.middle2 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+  color: #ff6a00;
+}
+.end2 {
+  position: absolute;
+  color: #ff6a00;
+}
+.middle1,
+.middle2 {
+  color: #cfcfcf;
+}
+.middle1 {
+  animation: ani1 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+.middle2 {
+  animation: ani2 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+
+
+@keyframes ani1 {
+  0% {
+    max-width: 500px;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  90% {
+    max-width: 500px;
+  }
+
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    max-width: 0;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  50% {
+    max-width: 500px;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 0;
+  }
+} */
+
+/* body {
+  display: flex;
+  background: #262626;
+
+
+  font-family: "Lucida Sans Unicode";
+  font-size: 40px;
+  height: 100vh;
+  overflow: hidden;
+  color: #ff6a00;
+}
+* {
+  box-sizing: border-box;
+}
+.container {
+  display: inline-block;
+}
+.end1,
+.middle1,
+.middle2 {
+  display: inline-block;
+  overflow: hidden;
+  height: 1.5em;
+}
+.end2 {
+  position: absolute;
+  color: #ff6a00;
+}
+.middle1,
+.middle2 {
+  color: #cfcfcf;
+}
+.middle1 {
+  animation: ani1 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+.middle2 {
+  animation: ani2 5s infinite;
+  animation-delay: -3s;
+  max-width: 0;
+}
+
+@keyframes ani1 {
+  0% {
+    max-width: 500px;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  90% {
+    max-width: 500px;
+  }
+
+  100% {
+    max-width: 500px;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    max-width: 0;
+  }
+
+  25% {
+    max-width: 0;
+  }
+
+  50% {
+    max-width: 500px;
+  }
+
+  75% {
+    max-width: 0;
+  }
+
+  100% {
+    max-width: 0;
+  }
 } */

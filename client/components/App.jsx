@@ -5,6 +5,7 @@ import StartTrivia from "./StartTrivia";
 import Results from "./Results";
 import Trivia from "./Trivia";
 
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -19,11 +20,13 @@ class App extends Component {
   render() {
     return (
       <div className="app">
-        <Router>
-          <Route exact path="/" component={StartTrivia} />
-          <Route exact path="/trivia" component={Trivia} />
-          <Route exact path="/results" component={Results} />
-        </Router>
+        
+          <Router>
+            <Route exact path="/" component={StartTrivia} />
+            <Route exact path="/trivia" component={Trivia} />
+            <Route exact path="/results" component={Results} />
+          </Router>
+       
       </div>
     );
   }
