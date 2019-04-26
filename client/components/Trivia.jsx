@@ -1,17 +1,24 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 class Trivia extends Component {
   constructor(props) {
     super(props);
     this.state = {};
   }
+
+  handleChange(e) {
+    this.setState({
+      [e.target.results]: e.target.results
+    });
+  }
   render() {
-    console.log(this.props);
+    console.log(this.state);
     return (
       <div>
         {/* <h1>{this.props.data[0].question}</h1> */}
 
-        <form>
+        <form onChange={this.handleChange}>
           {this.props.data.map(item => {
             // question
             return (
@@ -50,7 +57,9 @@ class Trivia extends Component {
               </div>
             );
           })}
-          <button type="submit">Submit</button>
+          <Link to="/results">
+            <button type="submit">Submit</button>
+          </Link>
         </form>
       </div>
     );

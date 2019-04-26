@@ -8,7 +8,7 @@ class Results extends Component {
   render() {
     return (
       <div>
-        <p>here34</p>
+        <h1>You got: 4/10</h1>
       </div>
     );
   }
