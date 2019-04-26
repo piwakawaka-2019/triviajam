@@ -1,13 +1,13 @@
 import {RECEIVE_POSTS} from '../actions'
 
-function subreddits (state = [], action) {
+function results (state = [], action) {
   switch (action.type) {
     case RECEIVE_POSTS:
-      return action.posts
+      return action.results
 
     default:
       return state
   }
 }
 
-export default subreddits
+export default results

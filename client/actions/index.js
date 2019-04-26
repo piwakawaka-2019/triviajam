@@ -10,10 +10,10 @@ export const requestPosts = () => {
   }
 }
 
-export const receivePosts = (posts) => {
+export const receivePosts = (results) => {
   return {
     type: RECEIVE_POSTS,
-    posts: posts.map(post => post.data)
+    posts: results.map(post => post.data)
   }
 }
 
@@ -24,7 +24,7 @@ export const showError = (errorMessage) => {
   }
 }
 
-export function fetchPosts (api_category) {
+export function fetchPosts (results) {
   return (dispatch) => {
     dispatch(requestPosts())
     return request
