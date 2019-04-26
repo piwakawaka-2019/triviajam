@@ -1,40 +1,40 @@
-import request from 'superagent'
+import request from "superagent";
 
-export const SHOW_ERROR = 'SHOW_ERROR'
-export const RECEIVE_POSTS = 'RECEIVE_POSTS'
-export const REQUEST_POSTS = 'REQUEST_POSTS'
+export const SHOW_ERROR = "SHOW_ERROR";
+export const RECEIVE_POSTS = "RECEIVE_POSTS";
+export const REQUEST_POSTS = "REQUEST_POSTS";
 
 export const requestPosts = () => {
   return {
     type: REQUEST_POSTS
-  }
-}
+  };
+};
 
-export const receivePosts = (posts) => {
+export const receivePosts = posts => {
   return {
     type: RECEIVE_POSTS,
-    posts: posts.map(post => post.data)
-  }
-}
+    posts: posts
+  };
+};
 
-export const showError = (errorMessage) => {
+export const showError = errorMessage => {
   return {
     type: SHOW_ERROR,
     errorMessage: errorMessage
-  }
-}
+  };
+};
 
-export function fetchPosts (api_category) {
-  return (dispatch) => {
-    dispatch(requestPosts())
+export function fetchPosts(api_category) {
+  return dispatch => {
+    dispatch(requestPosts());
     return request
-      .get('https://opentdb.com/api.php?amount=10')
+      .get("https://opentdb.com/api.php?amount=10")
       .then(res => {
-        console.log(res.body)
-        dispatch(receivePosts(res.body.results))
+        console.log(res.body);
+        dispatch(receivePosts(res.body.results));
       })
       .catch(err => {
-        dispatch(showError(err.message))
-      })
-  }
+        dispatch(showError(err.message));
+      });
+  };
 }

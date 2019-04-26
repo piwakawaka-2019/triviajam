@@ -1,14 +1,34 @@
-import React from 'react'
-import {connect} from 'react-redux'
-import {fetchPosts} from '../actions'
+import { connect } from "react-redux";
+import { fetchPosts } from "../actions";
 
-const triviaCategories = ({children, dispatch}) => (
-  <div>
-    <button onClick={() => dispatch(fetchPosts('api_category'))}>
-      Fetch Posts
-    </button>
-    {children}
-  </div>
-)
+import React, { Component } from "react";
 
-export default connect()(triviaCategories)
+class StartTrivia extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {};
+  }
+
+  // mapStateToProps(state)
+  render() {
+    console.log(this.state);
+    return (
+      <div>
+        <button onClick={() => this.props.dispatch(fetchPosts("api_category"))}>
+          Fetch Posts
+        </button>
+      </div>
+    );
+  }
+}
+export default connect()(StartTrivia);
+
+// export default StartTrivia;
+
+// const triviaCategories = ({ children, dispatch }) => (
+//   <div>
+//     <button onClick={() => dispatch(fetchPosts("api_category"))}>
+//       Fetch Posts
+//     </button>
+//   </div>
+// );

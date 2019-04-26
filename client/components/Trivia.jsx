@@ -6,7 +6,11 @@ class Trivia extends Component {
     this.state = {  }
   }
   render() { 
-    return ( <div></div> );
+    return (
+    <div>
+      <p>here11</p>
+    </div>
+    );
   }
 }
  
