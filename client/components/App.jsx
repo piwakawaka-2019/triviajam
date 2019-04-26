@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { HashRouter as Router, Route } from "react-router-dom";
-
+import { connect } from "react-redux";
 import StartTrivia from "./StartTrivia";
 import Results from "./Results";
 import Trivia from "./Trivia";
@@ -15,6 +15,7 @@ class App extends Component {
 
   //   }
   // }
+
   render() {
     return (
       <div className="app">
@@ -28,4 +29,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default connect()(App);

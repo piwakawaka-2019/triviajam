@@ -28,9 +28,10 @@ export function fetchPosts(api_category) {
   return dispatch => {
     dispatch(requestPosts());
     return request
-      .get("https://opentdb.com/api.php?amount=10")
+      .get(
+        "https://opentdb.com/api.php?amount=10&category=18&difficulty=hard&type=multiple"
+      )
       .then(res => {
-        console.log(res.body);
         dispatch(receivePosts(res.body.results));
       })
       .catch(err => {

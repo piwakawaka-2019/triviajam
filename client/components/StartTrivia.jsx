@@ -2,6 +2,7 @@ import { connect } from "react-redux";
 import { fetchPosts } from "../actions";
 
 import React, { Component } from "react";
+import { HashRouter as Router, Route, Link } from "react-router-dom";
 
 class StartTrivia extends Component {
   constructor(props) {
@@ -14,9 +15,13 @@ class StartTrivia extends Component {
     console.log(this.state);
     return (
       <div>
-        <button onClick={() => this.props.dispatch(fetchPosts("api_category"))}>
-          Fetch Posts
-        </button>
+        <Link to="/trivia">
+          <button
+            onClick={() => this.props.dispatch(fetchPosts("api_category"))}
+          >
+            Take Quiz
+          </button>
+        </Link>
       </div>
     );
   }

@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
 class Results extends Component {
   constructor(props) {
     super(props);
@@ -14,4 +14,4 @@ class Results extends Component {
   }
 }
 
-export default Results;
+export default connect()(Results);
