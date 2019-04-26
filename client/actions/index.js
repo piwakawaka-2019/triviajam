@@ -10,10 +10,10 @@ export const requestPosts = () => {
   }
 }
 
-export const receivePosts = (results) => {
+export const receivePosts = (posts) => {
   return {
     type: RECEIVE_POSTS,
-    posts: results.map(post => post.data)
+    posts: posts
   }
 }
 
