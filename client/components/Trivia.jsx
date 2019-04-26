@@ -19,24 +19,32 @@ class Trivia extends Component {
                 <h2>{item.question}</h2>
                 <fieldset id={item.question}>
                   <label for="A">A. {item.correct_answer}</label>
-                  <input type="radio" value={item.correct_answer} id="A" />
+                  <input
+                    type="radio"
+                    value={item.correct_answer}
+                    id="A"
+                    name={item.question}
+                  />
                   <label for="B">B. {item.incorrect_answers[0]}</label>
                   <input
                     type="radio"
                     value={item.incorrect_answers[0]}
                     id="B"
+                    name={item.question}
                   />
                   <label for="C">C. {item.incorrect_answers[1]}</label>
                   <input
                     type="radio"
                     value={item.incorrect_answers[1]}
                     id="C"
+                    name={item.question}
                   />
                   <label for="D">D. {item.incorrect_answers[2]}</label>
                   <input
                     type="radio"
                     value={item.incorrect_answers[2]}
                     id="D"
+                    name={item.question}
                   />
                 </fieldset>
               </div>
