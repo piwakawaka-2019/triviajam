@@ -38,7 +38,7 @@ class StartTrivia extends React.Component {
 
         {/* <input type="text" name='text' onChange={this.handleChange} /> */}
         <button onClick={this.handleSubmit}>
-          Fetch Posts
+         get trivia
         </button>
 
 
